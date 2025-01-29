@@ -74,7 +74,7 @@ export const getAllSoftwareApplications = () => async (dispatch) => {
   );
   try {
     const {data} = await axios.get(
-      "http://localhost:4000/api/v1/softwareapplication/getall",
+      "https://personal-portfolio-25a9.onrender.com/api/v1/softwareapplication/getall",
       { withCredentials: true }
     );
     dispatch(
@@ -98,7 +98,7 @@ export const addNewSoftwareApplication = (data) => async (dispatch) => {
   );
   try {
     const response = await axios.post(
-      "http://localhost:4000/api/v1/softwareapplication/add",
+      "https://personal-portfolio-25a9.onrender.com/api/v1/softwareapplication/add",
       data,
       {
         withCredentials: true,
@@ -126,7 +126,7 @@ export const deleteSoftwareApplication = (id) => async (dispatch) => {
   );
   try {
     const {data} = await axios.delete(
-      `http://localhost:4000/api/v1/softwareapplication/delete/${id}`,
+      `https://personal-portfolio-25a9.onrender.com/api/v1/softwareapplication/delete/${id}`,
       {
         withCredentials: true,
       }
