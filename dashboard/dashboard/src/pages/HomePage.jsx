@@ -26,7 +26,8 @@ const HomePage = () => {
   const [active,setActive]=useState("Dashboard");
   const {isAuthenticated,error,user}=useSelector((state)=>state.user);
   const dispatch=useDispatch();
-  const handleLogout=()=>{
+  const handleLogout = () => {
+    localStorage.removeItem("token");
     dispatch(logout());
     toast.success("Logged Out!");
   }
