@@ -38,6 +38,7 @@ const HomePage = () => {
     }
     if(!isAuthenticated){
       navigateTo("/login");
+      localStorage.removeItem("token");
     }
   },[isAuthenticated]);
 

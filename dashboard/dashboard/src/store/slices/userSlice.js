@@ -51,7 +51,7 @@ const userSlice =createSlice({
         logoutSuccess(state,action){
             state.loading=false;
             state.isAuthenticated=false;
-            state.user=null;
+            state.user={};
             state.error=null;
             state.message=action.payload;
         },
