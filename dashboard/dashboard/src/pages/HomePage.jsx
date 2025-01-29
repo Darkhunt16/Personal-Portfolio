@@ -27,7 +27,6 @@ const HomePage = () => {
   const {isAuthenticated,error,user}=useSelector((state)=>state.user);
   const dispatch=useDispatch();
   const handleLogout = () => {
-    localStorage.removeItem("token");
     dispatch(logout());
     toast.success("Logged Out!");
   }
@@ -39,6 +38,7 @@ const HomePage = () => {
     }
     if(!isAuthenticated){
       navigateTo("/login");
+      localStorage.removeItem("token");
     }
   },[isAuthenticated]);
 
