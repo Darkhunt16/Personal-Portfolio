@@ -26,7 +26,10 @@ const Login=()=> {
       dispatch(clearAllUserErrors());
     }
     if(isAuthenticated){
-      navigateTo("/");
+      toast.success("Login successful!");
+  setTimeout(() => {
+    navigateTo("/");
+  }, 1000); // 1-second delay
     }
   },[dispatch,isAuthenticated,error,loading]);
 

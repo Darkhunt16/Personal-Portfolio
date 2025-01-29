@@ -28,7 +28,10 @@ const ResetPassword = () => {
       dispatch(clearAllForgotPasswordErrors());
     }
     if(isAuthenticated){
-      navigateTo("/");
+      toast.success("Login successful!");
+  setTimeout(() => {
+    navigateTo("/");
+  }, 1000); // 1-second delay
     }
     if(message!==null){
       toast.success(message);
